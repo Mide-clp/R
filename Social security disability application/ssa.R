@@ -39,7 +39,7 @@ ssa_wide <- spread(ssa_long, application_method, Application)
 
 ssa_wide$percentage_online <-  (ssa_wide$Internet/ssa_wide$Total) * 100
 print(ssa_wide, n=20)
-### time series of growth internet 
+### time series of internet growth 
 
 ggplot(data = ssa_wide)+
   geom_point(mapping = aes(x = date, y = percentage_online, color = "orange"))
